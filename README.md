@@ -2,7 +2,6 @@
 
 First project in "C++Learning" category, using C++ course from Dyma
 
-- Made by Pops -
 
 ## To run the game
 
