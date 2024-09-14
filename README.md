@@ -46,3 +46,25 @@ then press 'Enter' and 'Y'.
 ```bash
   ./game
 ```
+
+#### You can also use Cmake to compile and run the program :
+
+To install CMake :
+
+- on Linux
+
+```bash
+sudo apt-get install cmake
+```
+
+- on Windows or MacOs
+
+Download it from https://cmake.org/download/ , and follow the set-up instructions
+
+To check :
+
+```bash
+cmake --version
+```
+
+Then use Cmake and CMake Tools extensions in VSCode to run the program with one click
