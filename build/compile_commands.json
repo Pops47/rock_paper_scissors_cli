@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/Users/paulinesoubrie/Dev/dyma/04_C++/pierre_feuille_ciseaux/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -g -std=gnu++20 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -o CMakeFiles/HelloWorld.dir/src/main.cpp.o -c /Users/paulinesoubrie/Dev/dyma/04_C++/pierre_feuille_ciseaux/src/main.cpp",
+  "file": "/Users/paulinesoubrie/Dev/dyma/04_C++/pierre_feuille_ciseaux/src/main.cpp",
+  "output": "CMakeFiles/HelloWorld.dir/src/main.cpp.o"
+}
+]
