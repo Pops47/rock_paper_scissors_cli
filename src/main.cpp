@@ -1,10 +1,47 @@
 #include <iostream>
 #include <cstdlib>
+#include <ctime>
 
 using std::cin;
 using std::cout;
 using std::endl;
 using std::string;
+
+void displayInstructions();
+int generateRandomNumber();
+string transformChoiceIntoString(int choice);
+void displayChoices(int userChoice, int computerChoice);
+void getResult(int userChoice, int computerChoice);
+
+int main()
+{
+  int userChoice{0};
+  std::srand(std::time(0));
+  do
+  {
+    displayInstructions();
+    cin >> userChoice;
+    system("clear");
+
+    if (userChoice < 0 || userChoice > 3)
+    {
+      cout << "Choix invalide, recommencez !" << endl;
+    }
+
+    else if (userChoice == 0)
+    {
+      cout << "Fin du jeu !" << endl;
+    }
+    else
+    {
+      int computerChoice = generateRandomNumber();
+      displayChoices(userChoice, computerChoice);
+      getResult(userChoice, computerChoice);
+    }
+
+  } while (userChoice != 0);
+  return 0;
+}
 
 void displayInstructions()
 {
@@ -27,12 +64,16 @@ string transformChoiceIntoString(int choice)
   {
   case 1:
     return "Pierre";
+    break;
   case 2:
     return "Feuille";
+    break;
   case 3:
     return "Ciseaux";
+    break;
   default:
-    return "Choice should be 1, 2 or 3";
+    return "Choix invalide";
+    break;
   }
 }
 
@@ -47,40 +88,13 @@ void getResult(int userChoice, int computerChoice)
   if (userChoice == computerChoice)
   {
     cout << "Egalité !" << endl;
-    cout << "---------------" << endl;
   }
-  else if (userChoice == 1 && computerChoice == 3 || userChoice == 2 && computerChoice == 1 || userChoice == 3 && computerChoice)
+  else if (userChoice == 1 && computerChoice == 3 || userChoice == 2 && computerChoice == 1 || userChoice == 3 && computerChoice == 2)
   {
     cout << "Vous avez gagné !" << endl;
-    cout << "---------------" << endl;
   }
   else
   {
     cout << "Vous avez perdu !" << endl;
-    cout << "---------------" << endl;
   }
-}
-
-int main()
-{
-  int userChoice{0};
-  do
-  {
-    displayInstructions();
-    cin >> userChoice;
-
-    if (userChoice < 0 || userChoice > 3)
-    {
-      cout << "Mauvais choix, on recommence !" << endl;
-    }
-
-    if (userChoice >= 1 && userChoice <= 3)
-    {
-      int computerChoice = generateRandomNumber();
-      displayChoices(userChoice, computerChoice);
-      getResult(userChoice, computerChoice);
-    }
-
-  } while (userChoice != 0);
-  return 0;
 }
